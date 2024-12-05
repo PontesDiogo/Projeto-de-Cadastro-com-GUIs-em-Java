@@ -41,7 +41,7 @@ O projeto é dividido em:
 
 2. **Clone o repositório:**
    ```bash
-   git clone https://github.com/PontesDiogo/Trabalho-POO-3
+   git clone [https://github.com/PontesDiogo/Trabalho-POO-3](https://github.com/PontesDiogo/Projeto-de-Cadastro-com-GUIs-em-Java
    ```
 
 3. **Configure o banco de dados:**
