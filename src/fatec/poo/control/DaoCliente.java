@@ -22,14 +22,14 @@ public class DaoCliente {
          this.conn = conn;
     }    
     
-    public Cliente consultar (int cpf) {
+    public Cliente consultar (String cpf) {
         Cliente objCliente = null;         
        
         PreparedStatement ps;
         try {
           ps = conn.prepareStatement("SELECT * from TBL_Cliente where cpf = ?");
             
-          ps.setInt(1, cpf);
+          ps.setString(1, cpf);
           ResultSet rs = ps.executeQuery();          
           if (rs.next() == true) {
              objCliente = new Cliente(rs.getString("cpf"), rs.getString("nome"), rs.getDouble("limiteCredito"));

@@ -27,14 +27,14 @@ public class DaoVendedor {
          this.conn = conn;
     }    
     
-    public Vendedor consultar (int cpf) {
+    public Vendedor consultar (String cpf) {
         Vendedor objVendedor = null;         
        
         PreparedStatement ps;
         try {
           ps = conn.prepareStatement("SELECT * from TBL_Vendedor where cpf = ?");
             
-          ps.setInt(1, cpf);
+          ps.setString(1, cpf);
           ResultSet rs = ps.executeQuery();          
           if (rs.next() == true) {
              objVendedor = new Vendedor(rs.getString("cpf"), rs.getString("nome"), rs.getDouble("salarioBase"));
